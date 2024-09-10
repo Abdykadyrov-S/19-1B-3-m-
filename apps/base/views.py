@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import About
 
 # Create your views here.
 # def index(request):
@@ -9,13 +10,11 @@ from django.http import HttpResponse
 #     text = "Мы создаем экосистему для обучения,  работы и творчества IT-специалистов"
 #     return HttpResponse(text)
 
-def index(request):
-    return render(request, 'index.html')
+# def index(request):
+#     return render(request, 'index.html')
 
 def about(request):
-    text = {
-        "title": "О нас",
-        "description": "Мы создаем экосистему для обучения,  работы и творчества IT-специалистов",
-        "students": ['Эргашев Даниер', 'Умаралие Акназар', 'Абдимиталипов Жанболот ', 'Сайдабаров Азамхожа', 'Идирисов Абдуазим']
-    }
-    return render(request, 'about.html', text)
+    main_page = "О нас"
+    # about = About.objects.latest('id')
+    about = About.objects.all()
+    return render(request, 'about.html', locals())
