@@ -34,6 +34,7 @@ header{
 .menu_block_item:hover{
     font-weight: 700;
 }
+
 .banner{
     background-image: url(../images/banner.png);
     background-repeat: no-repeat;
@@ -242,4 +243,12 @@ footer{
     width: 0 !important;
     height: 0 !important;
     
+}
+
+/* custom */
+
+.logo_image{
+    height: 70px;
+    width: 80px;
+    border-radius: 50%;
 }

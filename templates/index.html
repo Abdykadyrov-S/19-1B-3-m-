@@ -13,7 +13,7 @@
 <body>
     <header class="container">
         <div class="logo">
-            <img src="{% static 'assets/images/logo.png' %}" alt="">
+            <img class="logo_image" src="{{ settings.logo.url }}" alt="">
         </div>
         <div class="menu">
             <div class="menu_block">
@@ -32,9 +32,9 @@
         <section class="banner">
             <div class="banner_content container">
                 <h1>
-                    "Экоединство<br> Кыргызстана: Вместе к<br> Зелёному Будущему!"
+                    {{ settings.title }}
                 </h1>
-                <p>от команды Jashyl Oi</p>
+                <p>{{ settings.water_mark }}</p>
             </div>
         </section>
         <section class="kg_map container">
