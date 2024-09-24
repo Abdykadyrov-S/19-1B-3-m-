@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # apps
     'apps.base',
     'apps.qurultai',
+    'apps.telegram_bot',
 ]
 
 MIDDLEWARE = [
